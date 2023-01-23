@@ -20,7 +20,7 @@ Creating secret wordpress_db_root_password
 Creating service wordpress_db
 Creating service wordpress_wordpress
 
-4. Перевіряємо чи наші паролі та ім'я користувача стали secret командою (бачимо що все спрацювало): 
+4. Перевіряємо чи наші паролі та ім'я користувача стали secret, командою (бачимо що все спрацювало): 
 
 $ docker secret ls
 
