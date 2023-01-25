@@ -31,10 +31,10 @@ services:
       - db_user
 secrets:
   db_user:
-    file: ./secrets/db_user.txt
+    external: true
   db_password:
-    file: ./secrets/db_password.txt
+    external: true
   db_root_password:
-    file: ./secrets/db_root_password.txt
+    external: true
 volumes:
   db_data: {}
