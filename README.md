@@ -21,7 +21,7 @@ $ printf "пароль для root" | docker secret create db_root_password -
 
 $ docker secret ls
 
-5. Compose файл деплоїмо командою та отримуємо вивід про створення secret для наших логіну User та паролів, шлях до яких ми вказали в нашому файлі .yml, а також бачимо вивід про створення самого wordpress:
+5. Compose файл деплоїмо командою та отримуємо вивід про створення самого wordpress та можемо побачити, що тепер відсутнє при виводі creating secret, так як docker secret був створений до цього.
 
 $ docker stack deploy -c docker-compose.yml wordpress
 
@@ -30,8 +30,6 @@ Ignoring unsupported options: restart
 Creating network wordpress_default
 Creating service wordpress_db
 Creating service wordpress_wordpress
-
-Можемо побачити, що тепер відсутнє при виводі creating secret, так як docker secret був створений до цього.
 
 6. Перевіряємо, чи створені контейнери mysql та wordpress:
 
